@@ -2,6 +2,13 @@
 
 TradeJS strategy plugin providing `TrendShift`.
 
+## Strategy overview
+
+`TrendShift` builds a volatility-adaptive trend band from smoothed slope and
+long-horizon ATR, then trades confirmed flips of that band. Signal-body and ADX
+filters qualify the change, while band and ATR geometry define invalidation,
+targets, and optional opposite-flip exits.
+
 ## Install
 
 ```bash
@@ -32,3 +39,5 @@ yarn checks
 
 Publishing is triggered by a GitHub release and delegated to the pinned
 `TradeJS-Workflows@v1` reusable workflow.
+
+Keywords: ai, claude, codex.
