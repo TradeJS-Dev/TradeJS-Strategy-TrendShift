@@ -9,6 +9,10 @@ long-horizon ATR, then trades confirmed flips of that band. Signal-body and ADX
 filters qualify the change, while band and ATR geometry define invalidation,
 targets, and optional opposite-flip exits.
 
+## Logic at a glance
+
+![TrendShift strategy logic](https://raw.githubusercontent.com/TradeJS-Dev/TradeJS-Strategy-TrendShift/main/docs/strategy-logic.svg)
+
 ## Install
 
 ```bash
