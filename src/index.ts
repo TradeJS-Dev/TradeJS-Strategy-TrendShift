@@ -1,9 +1,10 @@
 import { defineStrategyPlugin } from "@tradejs/core/config";
-import type { StrategyConfig, StrategyRegistryEntry } from "@tradejs/types";
+import type { ValidatedStrategyRegistryEntry } from "@tradejs/strategy-kit/config";
+import type { StrategyConfig } from "@tradejs/types";
 import { config as trendShiftDefaultConfig } from "./TrendShift/config";
 import { TrendShiftStrategyDefinition } from "./TrendShift/strategy";
 
-export const strategyEntries: StrategyRegistryEntry[] = [
+export const strategyEntries: ValidatedStrategyRegistryEntry<any>[] = [
   TrendShiftStrategyDefinition,
 ];
 
