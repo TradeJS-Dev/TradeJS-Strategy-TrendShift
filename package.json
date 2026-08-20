@@ -1,6 +1,6 @@
 {
   "name": "@tradejs/strategy-trend-shift",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Volatility-adaptive trend-band strategy trading confirmed regime flips with body and ADX filters and opposite-flip exits for TradeJS.",
   "type": "module",
   "packageManager": "yarn@4.13.0",
