@@ -70,4 +70,8 @@ export type TrendShiftConfig = StrategyConfig &
     BACKTEST_PRICE_MODE: BacktestPriceMode;
     LONG: TrendShiftSideConfig;
     SHORT: TrendShiftSideConfig;
+    TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH_LONG?: number;
+    TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH_SHORT?: number;
+    TRENDSHIFT_MIN_ADX_LONG?: number;
+    TRENDSHIFT_MIN_ADX_SHORT?: number;
   };

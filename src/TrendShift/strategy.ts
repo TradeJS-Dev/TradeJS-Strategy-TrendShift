@@ -10,6 +10,12 @@ export const TrendShiftStrategyDefinition: ValidatedStrategyRegistryEntry<TrendS
     parseConfig: createStrategyConfigParser({
       strategyName: "TrendShift",
       defaults: DEFAULT_CONFIG,
+      optionalScalarFields: {
+        TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH_LONG: "number",
+        TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH_SHORT: "number",
+        TRENDSHIFT_MIN_ADX_LONG: "number",
+        TRENDSHIFT_MIN_ADX_SHORT: "number",
+      },
     }),
     createCore: createTrendShiftCore,
     manifest: trendShiftManifest,

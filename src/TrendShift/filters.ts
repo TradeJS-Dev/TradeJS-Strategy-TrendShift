@@ -1,4 +1,5 @@
-import type { BaseStrategyContextSnapshot } from "@tradejs/types";
+import { resolveDirectionalConfigNumber } from "@tradejs/strategy-kit/config";
+import type { BaseStrategyContextSnapshot, Direction } from "@tradejs/types";
 import type { TrendShiftConfig } from "./config";
 
 const asPositiveThreshold = (value: unknown): number | null => {
@@ -9,12 +10,19 @@ const asPositiveThreshold = (value: unknown): number | null => {
 export const getTrendShiftCoreFilterSkipCode = ({
   config,
   baseContext,
+  direction,
 }: {
   config: TrendShiftConfig;
   baseContext?: BaseStrategyContextSnapshot | null;
+  direction: Direction;
 }): string | null => {
   const minBodyStrength = asPositiveThreshold(
-    config.TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH,
+    resolveDirectionalConfigNumber({
+      config,
+      key: "TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH",
+      direction,
+      fallback: config.TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH,
+    }),
   );
   if (minBodyStrength != null) {
     const bodyStrength = Number(baseContext?.regime?.momentum?.bodyStrength);
@@ -23,7 +31,14 @@ export const getTrendShiftCoreFilterSkipCode = ({
     }
   }
 
-  const minAdx = asPositiveThreshold(config.TRENDSHIFT_MIN_ADX);
+  const minAdx = asPositiveThreshold(
+    resolveDirectionalConfigNumber({
+      config,
+      key: "TRENDSHIFT_MIN_ADX",
+      direction,
+      fallback: config.TRENDSHIFT_MIN_ADX,
+    }),
+  );
   if (minAdx != null) {
     const adx = Number(baseContext?.regime?.trend?.adx?.adx);
     if (!Number.isFinite(adx) || adx < minAdx) {

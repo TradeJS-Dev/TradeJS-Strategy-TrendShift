@@ -29,6 +29,21 @@ describe("strategy config contract", () => {
       );
     },
   );
+
+  it("accepts and materializes declared TrendShift directional overrides", () => {
+    const [entry] = strategyEntries;
+    expect(
+      entry.parseConfig({
+        TRENDSHIFT_MIN_ADX_SHORT: 40,
+        TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH_SHORT: 0.9,
+      }),
+    ).toMatchObject({
+      TRENDSHIFT_MIN_ADX: 25,
+      TRENDSHIFT_MIN_ADX_SHORT: 40,
+      TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH: 0.7,
+      TRENDSHIFT_MIN_SIGNAL_BODY_STRENGTH_SHORT: 0.9,
+    });
+  });
 });
 
 describe("package dependency contract", () => {
