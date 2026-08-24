@@ -9,7 +9,8 @@ These rules apply to this complete strategy repository.
 - The canonical workspace map is `~/dev/tradejs/AGENTS.md`. Do not scan
   sibling repositories when that map already identifies the owner.
 - Make this strategy's source, config, deterministic gate, figures, and test
-  changes here; run `yarn checks` here.
+  changes in this repository or its exact task worktree; run `yarn checks`
+  there.
 - Run backtest, replay, Redis, evidence, notes, and release operations from
   `~/dev/tradejs/tradejs-project`. Keep that directory as `PROJECT_CWD` and
   point `TRADEJS_SOURCE_REPOSITORY_ROOT` at this repository for lineage.
@@ -20,6 +21,11 @@ These rules apply to this complete strategy repository.
   `$strategy-forward-status` for read-only live inspection. Their instructions
   live in `~/dev/tradejs/investing/.codex/skills/`.
 - Do not create `data/`, `notes/`, runtime config, or deployment files here.
+- For bounded candidate research, keep the canonical checkout clean and use
+  one disposable worktree from the frozen baseline SHA per immutable lineage.
+  Preserve rejected candidate diffs in `TradeJS-Project`, point
+  `TRADEJS_SOURCE_REPOSITORY_ROOT` at the worktree, and commit only a selected
+  candidate. Remove the worktree only after the lineage evidence is frozen.
 
 ## Ownership
 
