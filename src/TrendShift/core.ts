@@ -60,9 +60,9 @@ const buildTrendShiftStateKey = (config: TrendShiftConfig) =>
       targetRMultLong: config.TRENDSHIFT_TARGET_R_MULT_LONG,
       targetRMultShort: config.TRENDSHIFT_TARGET_R_MULT_SHORT,
       maxLossValue: config.MAX_LOSS_VALUE,
-      feePercent: config.FEE_PERCENT,
-      slippageBaseBps: config.SLIPPAGE_BASE_BPS,
-      slippageMarketImpactBps: config.SLIPPAGE_MARKET_IMPACT_BPS,
+      feePercent: config.RISK_FEE_RATE,
+      slippageBaseBps: config.RISK_SLIPPAGE_BPS,
+      slippageMarketImpactBps: config.RISK_MARKET_IMPACT_BPS,
       long: config.LONG,
       short: config.SHORT,
     },
@@ -284,10 +284,10 @@ export const createTrendShiftCore: CreateStrategyCore<
         fallback: 2.5,
       }),
       maxLossValue: config.MAX_LOSS_VALUE,
-      feeRate: Number(config.FEE_PERCENT ?? 0),
+      feeRate: Number(config.RISK_FEE_RATE ?? 0),
       slippageBps:
-        Number(config.SLIPPAGE_BASE_BPS ?? 0) +
-        Number(config.SLIPPAGE_MARKET_IMPACT_BPS ?? 0),
+        Number(config.RISK_SLIPPAGE_BPS ?? 0) +
+        Number(config.RISK_MARKET_IMPACT_BPS ?? 0),
     });
 
     if (!qty || !Number.isFinite(qty) || qty <= 0) {
