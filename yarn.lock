@@ -1086,13 +1086,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tradejs/strategy-kit@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@tradejs/strategy-kit@npm:3.0.3"
+"@tradejs/strategy-kit@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "@tradejs/strategy-kit@npm:3.0.5"
   peerDependencies:
     "@tradejs/core": ^3.0.1
     "@tradejs/types": ^3.0.1
-  checksum: 10c0/f4cb0a81b80a0646762f9f2306774d6dec0529468120a125c2d5ddcbb4aaf0a27e469b71ff83dc8f1eb7b14dd2a1315dc8cd2970cdd363eaa0fc14d3f433215d
+  checksum: 10c0/9ddef5586ab48515419e7e8563802156fa98597e8809d760ae78f064637013d5c23a4edd8bfa949225aab503f21e03236cde816d23a5ba75d3b7765c8f6bad75
   languageName: node
   linkType: hard
 
@@ -1101,7 +1101,7 @@ __metadata:
   resolution: "@tradejs/strategy-trend-shift@workspace:."
   dependencies:
     "@tradejs/core": "npm:^3.0.1"
-    "@tradejs/strategy-kit": "npm:^3.0.3"
+    "@tradejs/strategy-kit": "npm:^3.0.5"
     "@tradejs/types": "npm:^3.0.1"
     "@types/jest": "npm:^29.5.14"
     jest: "npm:^29.7.0"
@@ -1111,7 +1111,7 @@ __metadata:
     typescript: "npm:^5.9.2"
   peerDependencies:
     "@tradejs/core": ^3.0.1
-    "@tradejs/strategy-kit": ^3.0.3
+    "@tradejs/strategy-kit": ^3.0.5
     "@tradejs/types": ^3.0.1
   languageName: unknown
   linkType: soft
