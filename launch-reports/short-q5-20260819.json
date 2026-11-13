@@ -1,0 +1,23 @@
+{
+  "schema": "tradejs-launch-report/v1",
+  "strategy": "TrendShift",
+  "candidate": "Short-only with quality 5 gate",
+  "sourceSha256": "5f04d0886247cf7715c8057e5653b56ca927b90d352c96bf47290858ba01e751",
+  "metrics": {
+    "trades": 31,
+    "pnl": 91.91,
+    "maxDrawdown": 14.740000000000002,
+    "maxLossStreak": 2,
+    "profitFactor": 2.135251976284585,
+    "winRatePercent": 64.51612903225806
+  },
+  "researchRiskUsdt": 10,
+  "period": {
+    "start": 1691488800000,
+    "end": 1786365000000
+  },
+  "chart": {
+    "caption": "Equity chart retained with the original research.",
+    "sha256": "90b41bd6911850811b75d0a3c44c5d3f7f10a93bb75988b268ab9585dc495085"
+  }
+}
