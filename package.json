@@ -1,7 +1,7 @@
 {
   "name": "@tradejs/strategy-trend-shift",
   "version": "3.0.6",
-  "description": "Volatility-adaptive trend-band strategy trading confirmed regime flips with body and ADX filters and opposite-flip exits for TradeJS.",
+  "description": "TrendShift looks for a change in direction when price breaks through a boundary of the current trend.",
   "type": "module",
   "packageManager": "yarn@4.13.0",
   "engines": {

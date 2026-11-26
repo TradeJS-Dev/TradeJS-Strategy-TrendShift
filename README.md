@@ -1,6 +1,9 @@
 # @tradejs/strategy-trend-shift
 
-TradeJS strategy plugin providing `TrendShift`.
+TrendShift looks for a change in direction when price breaks through a
+boundary of the current trend.
+
+[See examples and configuration in the TradeJS Marketplace](https://tradejs.dev/marketplace/trend-shift).
 
 ## Strategy overview
 
