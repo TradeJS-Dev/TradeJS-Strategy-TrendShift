@@ -1,6 +1,6 @@
 {
   "name": "@tradejs/strategy-trend-shift",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "TrendShift looks for a change in direction when price breaks through a boundary of the current trend.",
   "type": "module",
   "packageManager": "yarn@4.13.0",
